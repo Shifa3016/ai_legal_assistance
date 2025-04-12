@@ -114,7 +114,7 @@ export default function BlogPage() {
       </section>
 
       <section className="my-4">
-                <div className="flex items-center text-black justify-between mb-6">
+                <div className="flex items-center justify-between mb-6">
                     <h2 className="text-2xl font-semibold">Fundamental Rights</h2>
                     <Link href="/fundamental"><span>See More</span></Link>
                 </div>
@@ -134,7 +134,7 @@ export default function BlogPage() {
                             />
                             <div className="p-4">
                                 <p className="text-xs text-blue-600 mb-1">{fundamentalRights.category}</p>
-                                <h3 className="font-semibold text-lg mb-2">
+                                <h3 className="font-bold text-black text-lg mb-2">
                                     {fundamentalRights.title}
                                 </h3>
                                 <p className="text-sm text-gray-600 mb-4">
@@ -185,6 +185,7 @@ export default function BlogPage() {
       <section>
                 <div className="flex items-center justify-between mb-6">
                     <h2 className="text-2xl font-semibold">Property & Tenancy</h2>
+                    <Link href="/tenancy"><span>See More</span></Link>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
