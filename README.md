@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ⚖️ Lawsphere
 
-## Getting Started
+**Lawsphere** is a full-stack legal information platform built to spread legal awareness, provide easy access to legal articles, and assist users through AI and location-based services. The platform features legal blogs, a chatbot for legal help, and a way to discover NGOs near you — all wrapped in a modern, responsive UI with user authentication.
 
-First, run the development server:
+## 🌟 Features
+
+- 📰 **Legal Blogs & Articles**  
+  Stay informed with well-written, categorized content on various legal topics.
+
+- 🤖 **Legal Assistant Chatbot**  
+  An AI-powered chatbot to assist users with legal questions and basic guidance.
+
+- 📍 **NGOs Nearby**  
+  Enter your pincode to discover nearby NGOs that offer legal support and services, using location-based API integration.
+
+- 🔐 **User Authentication**  
+  Secure sign-up and login system to manage user access and personalize experience.
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Next.js** – for building the modern React-based UI  
+- **Tailwind CSS** – for fast and efficient styling  
+
+### Backend
+- **Express.js** – lightweight Node.js backend server for API handling  
+- **PostgreSQL** – to store NGO and user data  
+
+### APIs
+- **Google Places API / Custom APIs/ Open API** – to fetch nearby NGO data by pincode  
+
+### Deployment
+- **Vercel** – for seamless and fast deployment of the Next.js app  
+
+## 🔧 Project Structure (Simplified)
+
+```
+lawsphere/
+├── app/
+│   ├── page.js                 # Landing/Home Page
+│   ├── signup/page.js          # Sign Up Page
+│   ├── login/page.js           # Login Page
+│   ├── ngos/page.js            # NGOs Search Page
+│   ├── blog/                   # Blog section
+│   └── chatbot/page.js         # Legal Assistant
+├── public/
+├── styles/
+│   └── globals.css
+├── components/
+│   └── Navbar.js, Footer.js, etc.
+├── server/
+│   └── server.mjs              # Express server
+├── utils/
+│   └── db.js, auth.js, api.js  # DB & API utilities
+├── .env.local                  # Environment variables
+├── README.md
+└── ...
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js
+- PostgreSQL setup
+- Google Places API key
+- Open API
+
+### Installation
+
+```bash
+git clone https://github.com/your-username/lawsphere.git
+cd lawsphere
+npm install
+```
+
+### Run the Project
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔐 Environment Variables
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Create a `.env.local` file and include:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+DATABASE_URL_POSTGRES=your_postgres_url
+DATABASE_URL_MYSQL=your_mysql_url
+GOOGLE_API_KEY=your_google_places_api_key
+```
 
-## Learn More
+## 📌 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The app is deployed on **Vercel** for scalability and performance. Just push to your main branch and Vercel handles the rest.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
