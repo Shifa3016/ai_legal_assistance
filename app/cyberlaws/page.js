@@ -15,6 +15,7 @@ const cyberlaws = [
         "In Simple way we can say that cyber crime is unlawful acts wherein the computer is either a tool or a target or both. Cyber crimes can involve criminal activities that are traditional in nature, such as theft, fraud, forgery, defamation and mischief, all of which are subject to the Indian Penal Code. The abuse of computers has also given birth to a gamut of new age crimes that are addressed by the Information Technology Act, 2000.",
         image: "/Cyber/cyber3.jpg",
         mybutton: "Read More",
+        link: "https://infosecawareness.in/cyber-laws-of-india",
     },
     {
         title: "International Cyber Law",
@@ -23,6 +24,7 @@ const cyberlaws = [
         image: "/Cyber/cyber1.jpg",
         category: "Police & FIR",
         mybutton: "Read More",
+        link: "https://www.axiomlaw.com/guides/cyber-law",
     },
     {
         title: "Cyber Crimes and Challenges Faced by Judicial System",
@@ -30,6 +32,7 @@ const cyberlaws = [
             "Digital technology is encompassing in all walks of life, all over the world and has brought the real meaning of globalization. At the one end cyber system provides opportunities to communicate and at the other end some individuals or community exploit its power for criminal purposes. Criminals exploit the Internet and other network communications which are international in scope.",
         image: "/Cyber/cyber2.jpg",
         mybutton: "Read More",
+        link: "https://lawbhoomi.com/an-introduction-to-various-cybercrimes/",
     },
     
     {
@@ -38,6 +41,7 @@ const cyberlaws = [
             "Privacy can entail either  personally identifying  information (PII) or (non-PII) information such as a site visitor’s behavior on a website. PII refers to any information that can be used to identify an individual. For example, age and physical address alone could identify who an individual is without explicitly disclosing their name, as these two factors are unique enough to typically identify a specific person.",
         image: "/Cyber/cyber4.jpg",
         mybutton: "Read More",
+        link: "https://lawbhoomi.com/concept-of-privacy-and-threat-to-privacy-on-internet/",
     },
     {
         title: "Right Of Interception Under IT Act 2000",
@@ -45,6 +49,7 @@ const cyberlaws = [
             "As per section 69, of IT Act, 2000, the central and state government have been empowered to intercept, monitor or decryption of any information through any computer resources. Here the government can do the same only in these under mentioned grounds.",
         image: "/Cyber/cyber5.jpg",
         mybutton: "Read More",
+        link: "https://lawbhoomi.com/right-of-interception-under-it-act-2000/",
     },
     {
         title: "Identity Theft: An Overall Review",
@@ -52,6 +57,7 @@ const cyberlaws = [
             "Identity theft is a crime in which an imposter obtains essential pieces of personally identifiable information (PII) in order to impersonate another individual. This can be used to obtain or gain credit, merchandise and service in the name of victim. Identity theft can be classified in two ways: true name and account takeover.",
         image: "/Cyber/cyber6.jpg",
         mybutton: "Read More",
+        link: "https://lawbhoomi.com/right-of-interception-under-it-act-2000/",
     },
 ];
 
@@ -86,39 +92,44 @@ export default function CyberLaws() {
           ))}
         </div>
       </section>
-            <section>
-                <div className="flex items-center justify-between mb-6">
-                    <h2 className="text-2xl font-semibold">Cyber Laws</h2>
-                </div>
+      <section>
+            <div className="flex items-center justify-between mb-6">
+                <h2 className="text-2xl font-semibold">Cyber Laws</h2>
+            </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {cyberlaws.map((cyberlaws, i) => (
-                        <div
-                            key={i}
-                            className="bg-white rounded-xl shadow overflow-hidden"
-                        >
-                            <Image
-                                src={cyberlaws.image}
-                                alt={cyberlaws.title}
-                                width={400}
-                                height={200}
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="p-4">
-                                <h3 className="font-bold text-black text-lg mb-2">
-                                    {cyberlaws.title}
-                                </h3>
-                                <p className="text-sm text-gray-600 mb-4">
-                                    {cyberlaws.description}
-                                </p>
-                                <p className="text-xs text-[#f0c040] font-bold">
-                                    {cyberlaws.mybutton}
-                                </p>
-                            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {cyberlaws.map((item, i) => (
+                    <div
+                        key={i}
+                        className="bg-white rounded-xl shadow overflow-hidden"
+                    >
+                        <Image
+                            src={item.image}
+                            alt={item.title}
+                            width={400}
+                            height={200}
+                            className="w-full h-48 object-cover"
+                        />
+                        <div className="p-4">
+                            <h3 className="font-bold text-black text-lg mb-2">
+                                {item.title}
+                            </h3>
+                            <p className="text-sm text-gray-600 mb-4">
+                                {item.description}
+                            </p>
+                            <a
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-xs text-[#f0c040] font-bold hover:underline"
+                            >
+                                {item.mybutton}
+                            </a>
                         </div>
-                    ))}
-                </div>
-            </section>
+                    </div>
+                ))}
+            </div>
+        </section>
         </div>
     );
 }
