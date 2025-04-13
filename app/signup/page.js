@@ -45,7 +45,7 @@ export default function SignupPage() {
         <div className="left-signup bg-[#f0c040] w-full md:w-[50%] flex flex-col items-center justify-center text-center rounded-[40px] md:rounded-tl-[40px] md:rounded-bl-[40px] md:rounded-tr-[150px] md:rounded-br-[150px] py-6 px-4 md:px-[100px]">
           <h1 className="text-[30px] md:text-[40px] font-bold">Welcome Back!</h1>
           <p className="text-[14px] md:text-[16px] my-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            You're an existing user — sign in here to continue your journey.
           </p>
           <button
             onClick={() => router.push("/signin")}
