@@ -27,7 +27,7 @@ export default function Home() {
 
       {/* First Section */}
       <div className="flex flex-col sm:flex-row mx-2 sm:mx-4 my-6 sm:my-8">
-        <div className="w-full sm:w-full flex flex-col items-center justify-center text-center px-4 sm:px-12">
+        <div className="w-full sm:w-1/2 flex flex-col items-center justify-center text-center px-4 sm:px-12">
           <h1 className="text-xl sm:text-2xl font-bold">
             Know Your Rights. Seek Justice. Take Action.
           </h1>
