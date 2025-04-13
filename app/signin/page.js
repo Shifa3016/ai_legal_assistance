@@ -77,7 +77,7 @@ export default function SignIn() {
         <div className="left-signup bg-[#f0c040] w-full md:w-[50%] flex flex-col items-center justify-center text-center rounded-tl-[150px] rounded-bl-[150px] rounded-tr-[40px] rounded-br-[40px] py-6 px-4 md:px-[100px] hidden md:block">
           <h1 className="text-[30px] md:text-[40px] font-bold">Hello Friend!</h1>
           <p className="text-[14px] md:text-[16px] my-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vitae obcaecati
+            Welcome aboard! We're excited to have you here and look forward to an amazing journey together.
           </p>
           <Link href="/signup">
             <button className="px-12 py-2 mx-1 border border-black text-black hover:text-[#f0c040] hover:bg-black hover:border-[#f0c040] hover:font-bold transition">
