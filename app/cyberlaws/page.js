@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const categories = [
-    { name: "Fundamental Rights", icon: "/FR.jpg" },
-    { name: "Police & FIR", icon: "/PR.jpg" },
-    { name: "Property & Tenancy", icon: "/tenancy.jpg" },
-    { name: "Cyber Law", icon: "/cyber.jpg" },
-];
+    { name: "Fundamental Rights", icon: "/fundamentals.jpg", href: "/fundamental" },
+    { name: "Police & FIR", icon: "/PR.jpg", href: "/police" },
+    { name: "Property & Tenancy", icon: "/tenancy.jpg", href: "/tenancy" },
+    { name: "Cyber Law", icon: "/cyber.jpg", href: "/cyberlaws" },
+  ];
 
 const cyberlaws = [
     {
@@ -60,34 +60,32 @@ export default function CyberLaws() {
         <div className="p-6 md:p-10">
             <div className="">
                 <h1 className="text-4xl font-bold mb-2">Blog</h1>
-                <p className="text-gray-600 mb-10 max-w-2xl">
+                <p className="text-gray-300 mb-10 max-w-2xl">
                     Here is the information about your legal rights and responsibilities. Wondering how to file an FIR? What to do if you're harassed at work? We simplify the law for you—one article at a time.
                 </p>
             </div>
             <section className="mb-10">
-                <div className="flex items-center justify-between mb-6">
-                    <h2 className="text-2xl font-semibold">Top Categories</h2>
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-semibold">Top Categories</h2>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {categories.map((cat, i) => (
+            <Link key={i} href={cat.href}>
+              <div className="bg-white rounded-xl shadow p-4 flex flex-col items-center text-center cursor-pointer hover:shadow-md transition">
+                <div className="w-full h-32 relative">
+                  <Image
+                    src={cat.icon}
+                    alt={cat.name}
+                    fill
+                    className="object-contain"
+                  />
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    {categories.map((cat, i) => (
-                        <div
-                            key={i}
-                            
-                            className="bg-white rounded-xl shadow p-4 flex flex-col items-center text-center"
-                        >
-                            <div className="w-full h-32 relative">
-                                <Image
-                                    src={cat.icon}
-                                    alt={cat.name}
-                                    fill
-                                    className="object-contain"
-                                />
-                            </div>
-                            <p className="font-semibold mt-2">{cat.name}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
+                <p className="font-semibold mt-2 text-black">{cat.name}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
             <section>
                 <div className="flex items-center justify-between mb-6">
                     <h2 className="text-2xl font-semibold">Cyber Laws</h2>
