@@ -5,22 +5,29 @@
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run next\"",
     "server": "node server.mjs",
-    "next": "set PORT=3001 && next dev",
+    "next": "set PORT=3002 && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "axios": "^1.8.4",
+    "bcryptjs": "^3.0.2",
     "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "next": "15.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "next": "^15.3.0",
+    "path": "^0.12.7",
     "pg": "^8.14.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0"
+    "process": "^0.11.10",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "url": "^0.11.4",
+    "util": "^0.12.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
