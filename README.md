@@ -5,6 +5,8 @@
 **Presentation Link:** https://docs.google.com/presentation/d/1li-qZUJTsdr9XJvtri2rI-TX-7kgPxG7/edit?usp=sharing&ouid=100332202078166223510&rtpof=true&sd=true
 
 **Deployment Link:** https://ai-legal-assistance.vercel.app/
+
+**Prototype Video Link:** https://drive.google.com/drive/folders/1-KEDL5K9-ehtG34rU9jZt6YvroW94Dpk?usp=drive_link
 ## 🌟 Features
 
 - 📰 **Legal Blogs & Articles**  
