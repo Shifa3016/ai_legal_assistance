@@ -79,16 +79,18 @@ lawsphere/
 │   ├── login/page.js           # Login Page
 │   ├── ngos/page.js            # NGOs Search Page
 │   ├── blog/                   # Blog section
-│   └── chatbot/page.js         # Legal Assistant
+│   └── chatbot/chatbot.html        # Legal Assistant
 ├── public/
 ├── styles/
 │   └── globals.css
 ├── components/
 │   └── Navbar.js, Footer.js, etc.
-├── server/
-│   └── server.mjs              # Express server
-├── utils/
-│   └── db.js, auth.js, api.js  # DB & API utilities
+├── server.mjs              # Express server-Backend File
+│
+├── controllers/
+│   └── auth.mjs  # provide authentication
+├── router/
+│ └── auth.mjs, pages.mjs, ngo.mjs  # router
 ├── .env.local                  # Environment variables
 ├── README.md
 └── ...
@@ -100,7 +102,6 @@ lawsphere/
 
 - Node.js
 - PostgreSQL setup
-- Google Places API key
 - Open API
 
 ## Set-Up Instructions
